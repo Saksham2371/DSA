@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "regex": "cpp",
+    "*.tcc": "cpp",
+    "list": "cpp"
+  }
+}
