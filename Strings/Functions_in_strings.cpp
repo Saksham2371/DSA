@@ -13,5 +13,11 @@ int main()
 
     // to access a particular character from th e string
     cout << s1[2] << endl;
+
+    // comparing strings
+    string a1 = "abc";
+    string a2 = "xyz";
+    cout << s2.compare(s1) << endl; // s2 is big which is why 23 is as output
+
     return 0;
 }
