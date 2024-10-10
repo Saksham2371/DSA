@@ -32,8 +32,13 @@ int main()
 
     palindrome p;
 
-    if(p.pali(str)){
+    if (p.pali(str))
+    {
         cout << "palindrome" << endl;
+    }
+    else
+    {
+        cout << "Not" << endl;
     }
 
     return 0;
