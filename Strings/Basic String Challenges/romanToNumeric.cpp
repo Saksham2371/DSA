@@ -42,7 +42,7 @@ int romantoNumeric(string str)
             else
             {
                 res = res + (s2 - s1);
-                i++;
+                i++; //skipping the next symbol
             }
         }
         else
