@@ -42,7 +42,7 @@ int romantoNumeric(string str)
             else
             {
                 res = res + (s2 - s1);
-                i++; //skipping the next symbol
+                i++; // skipping the next symbol
             }
         }
         else
@@ -56,7 +56,7 @@ int romantoNumeric(string str)
 
 int main()
 {
-    string str = "IX";
+    string str = "XXI";
     cout << romantoNumeric(str) << endl;
     return 0;
 }

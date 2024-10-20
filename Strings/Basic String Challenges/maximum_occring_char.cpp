@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    string str = "abcacbade";
+    string str = "abcacbiooiashdioahdiohsaidohasoidiasdhioashdioashidasidjasjdajd9ja9jd9ade";
     int freq[26];
 
     for (int i = 0; i < 26; i++)
