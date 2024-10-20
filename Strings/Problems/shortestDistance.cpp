@@ -9,7 +9,7 @@ int shortestdistance(vector<string> &s, string w1, string w2)
     int d1 = -1;
     int d2 = -1;
 
-    int ans = INT_MAX;
+    int ans;
     for (int i = 0; i < s.size(); i++)
     {
         if (s[i] == w1)
@@ -22,7 +22,7 @@ int shortestdistance(vector<string> &s, string w1, string w2)
         }
         if (d1 != -1 && d2 != -1)
         {
-            ans = min(ans, abs(d1 - d2));
+            ans = abs(d1 - d2);
         }
     }
     return ans;
@@ -31,8 +31,8 @@ int shortestdistance(vector<string> &s, string w1, string w2)
 int main()
 {
     vector<string> s = {"the", "animal", "fox", "quack", "duck"};
-    string word1 = "animal";
-    string word2 = "duck";
+    string word1 = "the";
+    string word2 = "the";
     cout << shortestdistance(s, word1, word2) << endl;
     return 0;
 }
