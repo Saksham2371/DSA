@@ -1,57 +1,63 @@
-#include <iostream>
-#include <string>
-#include <climits>
-#include <cmath>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
-int Integerconverted(string &str)
+int StringtoInteger(string s)
 {
-    long long int res = 0;
+    if (s.length() == 0)
+    {
+        return 0;
+    }
+
     int i = 0;
-
-    while (str[i] == ' ')
+    while (i < s.length() && s[i] == ' ')
     {
         i++;
     }
-    int sign = 0;
+    s = s.substr(i);
 
-    if (str[sign] == '-')
+    int sign = +1;
+    long ans = 0;
+
+    if (s[0] == '-')
     {
-        sign = 1;
-        i++;
-    }
-    else if (str[sign] == '+')
-    {
-        sign = 0;
-        i++;
+        sign = -1;
     }
 
-    while (str[i] == '0')
+    int Max = INT_MAX;
+    int Min = INT_MIN;
+
+    if (s[0] == '+' || s[0] == '-')
     {
-        i++;
+        i = 1;
+    }
+    else
+    {
+        i = 0;
     }
 
-    while (str[i] > '0' && str[i] <= '9')
+    while (i < s.length())
     {
-        if (res > INT_MAX)
+        if (s[0] == ' ' || !isdigit(s[i]))
         {
-            if (sign)
-            {
-                return INT_MIN;
-            }
-            return INT16_MAX;
+            break;
         }
-        res = res * 10 + str[i] - '0';
+        ans = ans * 10 + s[i] - '0';
+        if (sign == -1 && -1 * ans < Min)
+        {
+            return Min;
+        }
+        if (sign == 1 && ans > Max)
+        {
+            return Max;
+        }
         i++;
     }
-    
+    return (int)(sign * ans);
 }
 
 int main()
 {
-    string str = "4623";
-    cout << Integerconverted(str) << endl;
+    string str = "  -4236abc";
+    cout << StringtoInteger(str) << endl;
     return 0;
 }
