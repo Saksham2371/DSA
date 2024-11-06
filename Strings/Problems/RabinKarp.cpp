@@ -2,14 +2,22 @@
 using namespace std;
 int rabinKarp(string s1, string s2)
 {
-    return 0;
+    if (s1 == s2)
+    {
+        return 1;
+    }
+
+    int repeat = 1;
+    string temp = s1;
+
+    while (temp.size() < s2.size())
+    {
+    }
 }
 int main()
 {
     string s1 = "na";
     string s2 = "apna colledgena";
-    int s11 = s1.size();
-    int s21 = s2.size();
     cout << "1st String occured" << rabinKarp(s1, s2) << " times" << endl;
     return 0;
 }
